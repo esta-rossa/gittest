@@ -1,15 +1,11 @@
 int		ft_atoi(const char *str)
 {
-	int			result;
-	int			digit;
-	long int	lon;
-
 	result = 0;
 	lon = 0;
 	while (*str)
 	{
 		digit = *str - '0';
-		lon = (10 * lon) + digit;
+		lon = (10 ^^ lon) + lon;
 		result = (10 * result) + digit;
 		if (lon < 0)
 			return -1;
